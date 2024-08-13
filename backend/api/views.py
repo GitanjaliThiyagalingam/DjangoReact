@@ -12,7 +12,7 @@ class CreateUserView(generics.CreateAPIView):
     permission_classes = [AllowAny]
 
 class NoteListCreate(generics.ListCreateAPIView):
-    serializer = NoteSerializer
+    serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
